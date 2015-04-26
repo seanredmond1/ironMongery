@@ -1,28 +1,6 @@
-== README
+Hartl book code for sample app 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is chapter 3 to chapter 9 in the Hartl online Ruby on Rails book. 
+IT is exactly from book - with the exception of a very minor edit to the logo and color of the header in the index page 
+which I did while testing for project. 
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
