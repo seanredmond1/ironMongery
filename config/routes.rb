@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get    'login'   => 'sessions#new'
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
+  get    'cart'    => 'cart#index' # used this instead of:  get 'cart/index' so can use rails routes (see Hartl ch5)
   resources :users
   resources :products
 end

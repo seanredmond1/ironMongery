@@ -1,6 +1,8 @@
 <h1>Catalog</h1>
 
-<table class="catalog">
+<%= link_to "Add new product!", new_product_path, class: "btn btn-lg btn-primary" %>
+
+<table class="Products">
     
     <% @product.each do |product| %>
     
