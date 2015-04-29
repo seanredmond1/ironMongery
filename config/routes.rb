@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  
+  get 'products/new'
+
   root                'static_pages#home'
   get    'help'    => 'static_pages#help'
   get    'about'   => 'static_pages#about'
@@ -8,4 +11,5 @@ Rails.application.routes.draw do
   post   'login'   => 'sessions#create'
   delete 'logout'  => 'sessions#destroy'
   resources :users
+  resources :products
 end
