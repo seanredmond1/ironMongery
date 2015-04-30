@@ -30,12 +30,13 @@
             <%= number_to_currency(product.price, unit: "€") %>
         </div>
         
-        <div class="links">
-
+         <div class="links">
+            <% if session[:login] == 1 %>
               <%= link_to 'Edit', edit_product_path(product) %> |
               <%= link_to 'Delete', product, :confirm => 'Are you sure?', :method => :delete %>
-
-        </div>
+            <% else %>
+              <a href="/cart/<%= product.id %>">Add to Cart</a><br><br>
+            <% end %>
         
         </div>
         
