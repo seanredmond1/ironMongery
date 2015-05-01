@@ -24,10 +24,10 @@
         </div>
         </td>
         <td class="title"><%= link_to product.title, product %></td>
-        <td class="price"><%= number_to_currency(product.price) %></td>
+        <td class="price"><%= number_to_currency(product.price , :unit => "€") %></td>
         <td class="quantity"><%= quantity %><br /></td>
         <td class="price">
-        <%= number_to_currency(quantity * product.price, :unit => "£") %>
+        <%= number_to_currency(quantity * product.price, :unit => "€") %>
     </td>
     </tr>
     <% total += quantity * product.price %>
