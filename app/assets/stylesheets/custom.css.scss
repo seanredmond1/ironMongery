@@ -1,6 +1,11 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.body{
+  margin-right: 110px;
+  margin-left: 110px;
+}
+
 /* mixins, variables, etc. */
 
 $gray-medium-light: #eaeaea;
@@ -106,28 +111,17 @@ p {
 
 /* header */
 
-.container{
-  margin-top: 10px;
-
-  
-
-}
-
-
-#logo {
-  float: left;
-  margin-right: 10px;
-  font-size: 1.7em;
-  color: white;
-  text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
-  font-weight: bold;
-  &:hover {
-    color: white;
-    text-decoration: none;
+.myheader{
+  background-color: black;
+  margin: 0px 110px 0px 110px;
+  padding: 2px 2px 2px 2px;// order - top, right , bottom, left 
+  li {
+    font-size: 1.25em;
+    font-weight: bold;
   }
 }
+
+
 
 /* footer */
 

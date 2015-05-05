@@ -19,7 +19,15 @@
   <strong>Image url:</strong>
   <%= @product.image %>
 </p>
-
+<% if logged_in? %>
+<% if current_user.admin? %>
 <%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %> |
+<%end%>
+<%end%>
+
+<%= link_to 'Back', products_path %> 
+
+<% if logged_in? %>
+|
 <a href="/cart/<%= @product.id %>">Add to Cart</a> 
+<%end%>

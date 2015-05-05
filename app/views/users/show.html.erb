@@ -6,6 +6,13 @@
         <%= gravatar_for @user %>
         <%= @user.name %>
       </h1>
+       <% if logged_in?%>
+       <% if current_user.admin?%>
+       <a>Status: Admin-User</a> 
+       <% else %>
+      <a>Status: Non-Admin User</a>
+      <% end %>
+      <%end%>
     </section>
   </aside>
 </div>
