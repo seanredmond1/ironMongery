@@ -6,27 +6,27 @@
 
 <% total = 0 %>
 	
-<table class="cart">
+<table class="cart" align="center", border="2">
     <tr>
-        <td class="legend"></td>
-        <td class="legend">Product</td>
-        <td class="legend">Price</td>
-        <td class="legend">Qty</td>
-        <td class="legend">Total</td>
+        <td></td>
+        <td align="center"><b>Product</b></td>
+        <td align="center"><b>Price</b></td>
+        <td align="center"><b>Quantity</b></td>
+        <td align="center"><b>Total</b></td>
     </tr>
 	
 <% @cart.each do | id, quantity | %>
     <% product = Product.find_by_id(id) %>
     <tr>
         <td>
-        <div class="image">
+        <div class="image", align = "center">
             <%= link_to (image_tag product.image, :style => "height:40px"), product %>
         </div>
         </td>
-        <td class="title"><%= link_to product.title, product %></td>
-        <td class="price"><%= number_to_currency(product.price , :unit => "€") %></td>
-        <td class="quantity"><%= quantity %><br /></td>
-        <td class="price">
+        <td><div class="title", align="center"><%= link_to product.title, product %></div></td>
+        <td><div class="price", align="center"><%= number_to_currency(product.price , :unit => "€") %></div></td>
+        <td><div  class="quantity", align="center"><%= quantity %><br /></div></td>
+        <td class="price", align= "center">
         <%= number_to_currency(quantity * product.price, :unit => "€") %>
     </td>
     </tr>
@@ -43,7 +43,11 @@
     </tr>
 </table>
 
-<p>
-     <%= link_to 'Continue Shopping', :controller => :products %>
+<p align="center">
+    <%= link_to 'Continue Shopping', :controller => :products %>
 </p>
+
+
+
+
 

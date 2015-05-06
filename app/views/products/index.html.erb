@@ -1,15 +1,10 @@
 <h1>Catalog</h1>
 
-<b><a><%= link_to "Add new product!", new_product_path%></a></b>
-
-<table class="Products">
+<table class="Products", align="center">
     
     <% @product.each do |product| %>
     
-        
-    
     <tr>
-        
         <td>
         <div class="image">
             <%= link_to (image_tag product.image, :style => "height:100px"), product %>
@@ -50,3 +45,5 @@
        
     <% end %>
     </table>
+    
+    <b><a><%= link_to "Add new product!", new_product_path%></a></b>
