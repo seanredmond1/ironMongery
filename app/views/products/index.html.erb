@@ -1,6 +1,6 @@
 <h1>Catalog</h1>
 
-<%= link_to "Add new product!", new_product_path, class: "btn btn-lg btn-primary" %>
+<b><a><%= link_to "Add new product!", new_product_path%></a></b>
 
 <table class="Products">
     
@@ -22,11 +22,11 @@
         <div class = "half_page_width">
     
         <div class="title">
-            <%= link_to product.title, product %>
+            <b><%= link_to product.title, product %></b>
         </div>
         
         <div class="description">
-            <%= product.description %>
+           <i><%= product.description %></i> 
         </div>
         
         <div class="price">

@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<p>
+<table class="Products">
+  
+    <tr>
+      <td>
+        <p>
   <strong>Title:</strong>
   <%= @product.title %>
 </p>
@@ -12,7 +16,7 @@
 
 <p>
   <strong>Price:</strong>
-  <%= @product.price %>
+  €<%= @product.price %>
 </p>
 
 <p>
@@ -31,3 +35,20 @@
 |
 <a href="/cart/<%= @product.id %>">Add to Cart</a> 
 <%end%>
+        
+      </td>
+        <td>
+        <div class="image">
+            <%= link_to (image_tag @product.image, :style => "height:100px"), @product %>
+            
+        </div>
+        </td>
+        
+    </tr>
+
+</table>
+
+
+
+
+
