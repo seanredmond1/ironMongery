@@ -2,19 +2,22 @@
 
 <table class="Products", align="center">
     
+
+    
     <% @product.each do |product| %>
+    
+
     
     <tr>
         <td>
-        <div class="image">
+
             <%= link_to (image_tag product.image, :style => "height:100px"), product %>
-            
-        </div>
+
         </td>
         
         <td>
             
-        <div class = "half_page_width">
+        <div class = "gap-between-pic-and-description">
     
         <div class="title">
             <b><%= link_to product.title, product %></b>
@@ -39,11 +42,13 @@
     <% end %>
         
         </div>
+
     </td>
     </tr>
     
-       
     <% end %>
     </table>
+    
+
     
     <b><a><%= link_to "Add new product!", new_product_path%></a></b>

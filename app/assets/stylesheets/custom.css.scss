@@ -1,10 +1,17 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.body{
-  margin-right: 110px;
-  margin-left: 110px;
+body{
+padding: 70px 0px 20px 0px;// top right bottom left is the order
+ //background-image: url("bkrimage1.jpg");
+ background-color: #d3d3d3;
+} 
+
+.container{
+  background-image: url("bkrimage1.jpg");
+  //background-color: #d3d3d3;
 }
+
 
 /* mixins, variables, etc. */
 
@@ -18,9 +25,6 @@ $gray-medium-light: #eaeaea;
 
 /* universal */
 
-body {
-  padding-top: 60px;
-}
 
 section {
   overflow: auto;
@@ -110,19 +114,21 @@ p {
 
 
 /* header */
+.navbar-fixed-top{
+  background-image: url("blackback2.jpg");
+  background-size: 100%;
+  padding: 1px 110px 1px 100px;// top right bottom left is the order
 
-.myheader{
-  background-color: black;
 
-  padding: 2px 117px 13px 118px;// order - top, right , bottom, left 
-  li {
-    font-size: 1.25em;
+  
+    li {
+    font-size: 1.40em;
     font-weight: bold;
   }
 }
 
 
-.myheader li a:hover {
+.navbar-fixed-top li a:hover {
 color: black;
 }
 
@@ -130,16 +136,17 @@ color: black;
 /* footer */
 
 footer {
-  margin-top: 45px;
-  padding-top: 5px;
+  
   border-top: 1px solid $gray-medium-light;
-  color: $gray-light;
+
+
   a {
     color: $gray;
     &:hover {
       color: $gray-darker;
     }
   }
+  
   small {
     float: left;
   }
@@ -152,6 +159,8 @@ footer {
     }
   }
 }
+
+
 
 /* miscellaneous */
 
@@ -212,7 +221,11 @@ aside {
   }
 }
 
-
+.center-mybutton{
+  margin-left:auto;
+  margin-right:auto;
+  width: 10%;
+}
 
 
 

@@ -1,19 +1,14 @@
 <header class="navbar-fixed-top">
-  <div class="myheader">
-    
     <nav>
-
-    <%= link_to(image_tag("ironworkers.jpg", :alt => "Ironmongery logo", :width => "12%", :height => "12%"), root_path) %>
+    <%= link_to(image_tag("ironworkers.jpg", :alt => "Ironmongery logo", :width => "15%", :height => "15%"), root_path) %>
 
     <ul class="nav navbar-nav navbar-right">
-
       <li><%= link_to "Home", root_path %></li>
       <li><%= link_to "About", about_path %></li>
       <li><%= link_to "Products", products_path %></li>
-      
-        <% if logged_in? %>
-          <li><%= link_to "Users", users_path %></li> 
-              <li><%= link_to "Cart", cart_path %></li>
+      <% if logged_in? %>
+        <li><%= link_to "Users", users_path %></li> 
+          <li><%= link_to "Cart", cart_path %></li>
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account <b class="caret"></b></a>
             <ul class="dropdown-menu">
@@ -23,11 +18,9 @@
               <li><%= link_to "Log out", logout_path, method: "delete" %></li>
             </ul>
           </li>
-          
         <% else %>
           <li><%= link_to "Log in", login_path %></li>
         <% end %>
       </ul>
     </nav>
-  </div>
 </header>

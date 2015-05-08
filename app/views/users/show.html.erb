@@ -8,9 +8,9 @@
       </h1>
        <% if logged_in?%>
        <% if @user.admin?%>
-       <a>Status: Admin-User</a> 
+       <small><p>Status: Admin-User</p></small> 
        <% else %>
-      <a>Status: Non-Admin User</a>
+      <small><p>Status: Non-Admin User</p></small>
       <% end %>
       <%end%>
     </section>

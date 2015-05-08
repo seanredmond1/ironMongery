@@ -1,11 +1,11 @@
 <h1>Your Cart</h1>
 
+<% total = 0 %>
+
 <% if @cart.empty? %>
     <p>Your Cart is empty.</p>
-<% end %>
+<%else%>
 
-<% total = 0 %>
-	
 <table class="cart" align="center", border="2">
     <tr>
         <td></td>
@@ -34,14 +34,18 @@
 <% end %>
 
     <tr>
-        <td colspan="4">
-            <div class="total">Total:</div>
+        <td colspan="3"><div class="total"></div></td>
+        <td>
+            <div class="total", align="center">Total:</div>
         </td>
+
         <td>
             <div class="price"><%= number_to_currency(total, :unit => "€") %></div>
         </td>
     </tr>
 </table>
+
+<% end %>
 
 <p align="center">
     <%= link_to 'Continue Shopping', :controller => :products %>
