@@ -62,10 +62,10 @@ class UsersController < ApplicationController
       end
      end
      
-        # Confirms the correct user.
+    # Confirms the correct user. Can't edit profile details of user if logged in as a different user. 
     def correct_user
       @user = User.find(params[:id])
-      redirect_to(root_url) unless current_user?(@user)
+      redirect_to(root_url) unless current_user==@user
     end
     
         # Confirms an admin user.

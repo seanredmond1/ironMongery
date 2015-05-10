@@ -1,3 +1,5 @@
+<% provide(:title, 'Our Products') %>
+
 <h1>Catalog</h1>
 
 <table class="Products", align="center">
@@ -40,7 +42,7 @@
               <%= link_to 'Edit', edit_product_path(product) %> |
               <%= link_to 'Delete', product, :confirm => 'Are you sure?', :method => :delete %> |
               <% end %>
-              <a href="/cart/<%= product.id %>">Add to Cart</a><br><br>
+              <a href="/cart/<%= product.id %>">Add to Cart</a>
     <% end %>
         
         </div>

@@ -1,5 +1,9 @@
 class ProductsController < ApplicationController
   
+  before_action :administrative_user, only: [:new, :create, :edit, :update]
+  
+  
+  
   def index
     @product = Product.all
   end
@@ -47,5 +51,20 @@ end
 
     def product_params
       params.require(:product).permit(:title, :price, :description, :image)
+    end
+    
+    
+    
+    def administrative_user
+      if logged_in?
+        if ! current_user.admin?
+          redirect_to(root_url)
+          flash[:danger] = "Only Admin Users are authorized to do this!"
+        end
+      end
+      if ! logged_in?
+          redirect_to(login_url)
+          flash[:danger] = "To do this you must be logged in (and must be an admin user)!"
+      end
     end
 end
