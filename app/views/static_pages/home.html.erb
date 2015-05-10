@@ -2,12 +2,14 @@
   
 
   <h1>
-  <%= link_to(image_tag("doorlock.png", :alt => "Ironmongery logo", :style => "height:100px")) %> 
+  <%= link_to(image_tag("doorlock.png", :alt => "Ironmongery logo", :style => "height:50px")) %> 
   Welcome to Iron Workers Ltd
-  <%= link_to(image_tag("doorlock.png", :alt => "Ironmongery logo", :style => "height:100px")) %> 
+  <%= link_to(image_tag("doorlock.png", :alt => "Ironmongery logo", :style => "height:50px")) %> 
   </h1>
   
-  <div class="center-mybutton">
+  <%= render 'layouts/googleSearchBox' %>
+  
+    <div class="center-mybutton">
     
   <%if logged_in?%>
   <%= link_to "Log out now!", logout_path, method: "delete", class: "btn btn-lg btn-primary" %>
@@ -16,14 +18,19 @@
   <%end%>
   
   </div>
-  
 
   
-
-  <h2>
+  
+  
+    <h2>
     Ironworkers uses only the best quality materials. Read more on this 
     <%= link_to "here", about_path %>
   </h2>
+  
+
+  
+
+
   
   
 

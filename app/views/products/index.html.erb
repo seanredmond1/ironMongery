@@ -49,6 +49,8 @@
     <% end %>
     </table>
     
-
-    
-    <b><a><%= link_to "Add new product!", new_product_path%></a></b>
+    <% if logged_in? %>
+        <% if current_user.admin? %>
+            <b><a><%= link_to "Add new product!", new_product_path%></a></b>
+            <%end%>
+        <% end %>
