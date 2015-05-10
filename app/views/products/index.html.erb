@@ -7,9 +7,11 @@
     <% @product.each do |product| %>
     
 
-    
+
     <tr>
+
         <td>
+        <div class="gap-between-each-product">
 
             <%= link_to (image_tag product.image, :style => "height:100px"), product %>
 
@@ -42,9 +44,13 @@
     <% end %>
         
         </div>
-
+    </div>
     </td>
+    
+
     </tr>
+    
+
     
     <% end %>
     </table>
