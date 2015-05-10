@@ -9,9 +9,12 @@ class CartController < ApplicationController
     redirect_to :action => :index
   end
 
+
   def index
     @cart = session[:cart] || {}
   end
+  
+  
   
   def change
   cart = session[:cart]
@@ -26,6 +29,9 @@ class CartController < ApplicationController
   end
     redirect_to :action => :index
   end
+  
+  
+  
   
   def checkout
     flash[:notice] = "CHECKOUT IS NOT IMPLEMENTED YET!!!"
